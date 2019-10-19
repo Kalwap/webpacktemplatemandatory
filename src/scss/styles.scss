@@ -3,13 +3,20 @@ $colorHeading: #be4a14;
 #content  // div with id: content
 {
     color: $fontColor;
+    font-size:150%
 }
 
 h2
 {
     color: $colorHeading;
+    font-size: 30mm;
+    text-align:"corner-present";
+    
+
+
 }
 
 h1{
     @extend h2;
+    font-size : 160%
 }

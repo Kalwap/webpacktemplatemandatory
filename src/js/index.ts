@@ -10,3 +10,14 @@ let user: Person = { firstName: "John", lastName: "Doe" };
 
 let element: HTMLDivElement = <HTMLDivElement> document.getElementById("content");
 element.innerHTML = greeter(user);
+
+class exampleFunction {
+    msg : string = "hello world";
+
+    showMsg(){
+        console.log(this.msg);
+    }
+}
+
+var example = new exampleFunction()
+example.showMsg();
