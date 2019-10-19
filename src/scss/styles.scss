@@ -1,22 +1,15 @@
-$fontColor: #0091aa;
-$colorHeading: #be4a14;
-#content  // div with id: content
-{
-    color: $fontColor;
-    font-size:150%
+h1 {
+    color: yellow;
 }
 
-h2
+newlist:nth-child(odd)
 {
-    color: $colorHeading;
-    font-size: 30mm;
-    text-align:"corner-present";
-    
-
-
+color:yellow;
+background-color: black;
 }
 
-h1{
-    @extend h2;
-    font-size : 160%
+newlist:nth-child(even)
+{
+  color : black;
+  background-color: yellow;
 }

@@ -1,23 +1,27 @@
-interface Person {
-    firstName: string;
-    lastName: string;
-}
+document.getElementById("rowinput").addEventListener("click",AdditionTolist);
+let TabCaseSelect : HTMLSelectElement = <HTMLSelectElement>document.getElementById("tabcaseselect");
+let list = document.getElementById("listofstring");
+let ClearInput : HTMLSelectElement = <HTMLSelectElement>document.getElementById("clearinput");
 
-function greeter(person: Person): string {
-    return "Hello, " + person.firstName + " " + person.lastName;
-}
-let user: Person = { firstName: "John", lastName: "Doe" };
 
-let element: HTMLDivElement = <HTMLDivElement> document.getElementById("content");
-element.innerHTML = greeter(user);
 
-class exampleFunction {
-    msg : string = "hello world";
-
-    showMsg(){
-        console.log(this.msg);
+function AdditionTolist()
+{
+    let result = ClearInput.value;
+    let newlist = document.createElement("newlist");
+    switch(TabCaseSelect.value)
+    {
+        case "UpperCase":
+        newlist.innerHTML = result.toUpperCase();
+        break;
+        case "LowerCase":
+        newlist.innerText = result.toLowerCase();
+        break;
+        
+    
     }
-}
+    list.appendChild(newlist);
 
-var example = new exampleFunction()
-example.showMsg();
+
+
+}
